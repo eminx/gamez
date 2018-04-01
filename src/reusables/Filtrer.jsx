@@ -1,27 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Filtrer extends React.Component {
   state = {
     isFilterText: false
-  }
-
-  searchCrossIcon = () => {
-    const value = this.state.isFilterText;
-    if (value)  {
-      return (
-        <i 
-          className="material-icons" 
-          style={{cursor:'pointer'}} 
-          onClick={this.props.deleteFilterText}
-        >
-          close
-        </i>
-      );
-    } else {
-      return (
-        <i className="material-icons">search</i>
-      );
-    }
   }
 
   handleFilterChange = (e) => {
@@ -43,8 +25,9 @@ class Filtrer extends React.Component {
     this.props.isFocused ? this.refs.filterInput.focus() : null;
 
     return (
-      <div className="filter-input">    
+      <div className="filter-input">
         <input
+          style={{lineHeight: 2, padding: 5, borderColor: '#0d0d0d'}}
           type="text"
           onChange={this.handleFilterChange}
           ref="filterInput"
@@ -52,16 +35,16 @@ class Filtrer extends React.Component {
           className="filter-objects"
           placeholder={this.props.placeholder}
         />
-        <span className="filter-icon">{this.searchCrossIcon()}</span>
       </div>
     )
   }
 }
 
+Filtrer.propTypes = {
+  placeholder: React.PropTypes.string.isRequired,
+  updateFilter: React.PropTypes.func.isRequired,
+  isFocused: React.PropTypes.bool
+}
+
 export default Filtrer;
 
-  // propTypes: {
-  //   placeholder: React.PropTypes.string.isRequired,
-  //   updateFilter: React.PropTypes.func.isRequired,
-  //   isFocused: React.PropTypes.bool
-  // }
