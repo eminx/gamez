@@ -15,11 +15,11 @@ const GameItemDetailed = ({item, onClose}) => {
 
 	return (
 		<div className={modalOverlay} >
+			<span onClick={onClose} style={{position: 'absolute', top: 10, right: 10, fontSize: 30, color: '#fff', cursor: 'pointer'}}>X</span>
 			<div className="modal clearfix" style={{backgroundColor: item ? item.attributes.img_card_avg_color : null,}}>
 				{item 
 					?
 						<div>
-							<span onClick={onClose} style={{position: 'absolute', top: 40, right: 40, cursor: 'pointer'}}>X</span>
 							<div style={style} />
 							<h2>{item.attributes.name}</h2>
 							<div dangerouslySetInnerHTML={{__html: item.attributes.description}}></div>
@@ -39,8 +39,8 @@ const GameItemDetailed = ({item, onClose}) => {
 }
 
 GameItemDetailed.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
-  item: React.PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired,
+  item: PropTypes.object,
 }
 
 export default GameItemDetailed;

@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const backupLink = 'https://nodal-gatherings.s3-eu-central-1.amazonaws.com/hugi@hugi.se/download.png';
-
 const GameItem = (props) => {
 	const game = props.game.attributes;
 
@@ -29,8 +27,8 @@ const GameItem = (props) => {
 };
 
 GameItem.propTypes = {
-  onClick: React.PropTypes.func.isRequired,
-  game: React.PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired,
+  game: PropTypes.object.isRequired,
 }
 
 

@@ -22,8 +22,6 @@ class Filtrer extends React.Component {
   }
 
   render() {
-    this.props.isFocused ? this.refs.filterInput.focus() : null;
-
     return (
       <div className="filter-input">
         <input
@@ -41,9 +39,9 @@ class Filtrer extends React.Component {
 }
 
 Filtrer.propTypes = {
-  placeholder: React.PropTypes.string.isRequired,
-  updateFilter: React.PropTypes.func.isRequired,
-  isFocused: React.PropTypes.bool
+  placeholder: PropTypes.string.isRequired,
+  updateFilter: PropTypes.func.isRequired,
+  isFocused: PropTypes.bool
 }
 
 export default Filtrer;

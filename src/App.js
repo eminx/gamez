@@ -3,7 +3,6 @@ import GameItem from './reusables/GameItem';
 import GameItemDetailed from './reusables/GameItemDetailed';
 import Filtrer from './reusables/Filtrer';
 
-import logo from './logo.svg';
 import './App.css';
 const gamesData = require("./store/data.json");
 
