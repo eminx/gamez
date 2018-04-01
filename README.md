@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-#Introduction
+# Introduction
+
 This is a React application built with these features:
 - to show a list of games
 - allow the games to be filtered
@@ -9,7 +10,7 @@ This is a React application built with these features:
 - show additional info within the above list
 
 
-#Running
+# Running
 
 After you clone the app, and go to the root repo, it is as simple as:
 
