@@ -18,6 +18,6 @@ After you clone the app, and go to the root repo, it is as simple as:
 
 2- `npm start` to run the app locally
 
-3- `npm run build` to build it locally (this should ideally be taken care of in the server via jenkinsFile. Contact your favourite dev-ops person. If you don't have any, Marcus Johansson is the one)
+3- `npm run build` to build it locally
 
 That's it.
