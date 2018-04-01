@@ -60,12 +60,22 @@ class App extends Component {
       padding: 10,
     }
 
+    const thumbStyle = {
+      paddingLeft: 90,
+      backgroundImage: `url('${game.attributes.img_card_bg}')`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'left top',
+      backgroundSize: 85
+    }
+
     if (online_friends && online_friends.length > 0) {
       return (
-        <li key={game.id} style={style}> 
-          <h4>{game.attributes.name}</h4>
-          <p>{this.getPlayersData(game)}</p>
-          <div>
+        <li className="clearfix" key={game.id} style={style}>
+          <div style={thumbStyle}>
+            <h4>{game.attributes.name}</h4>
+            <p>{this.getPlayersData(game)}</p>
+          </div>
+          <div style={{float: 'right'}}>
             {
               online_friends.map(
                 friend => (

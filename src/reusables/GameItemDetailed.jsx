@@ -15,7 +15,7 @@ const GameItemDetailed = ({item, onClose}) => {
 
 	return (
 		<div className={modalOverlay} >
-			<span onClick={onClose} style={{position: 'absolute', top: 10, right: 10, fontSize: 30, color: '#fff', cursor: 'pointer'}}>X</span>
+			<span onClick={onClose} style={{position: 'absolute', top: 40, right: 40, fontSize: 30, color: '#fff', cursor: 'pointer'}}>X</span>
 			<div className="modal clearfix" style={{backgroundColor: item ? item.attributes.img_card_avg_color : null,}}>
 				{item 
 					?
