@@ -24,7 +24,7 @@ const GameItemDetailed = ({item, onClose}) => {
 							<h2>{item.attributes.name}</h2>
 							<div dangerouslySetInnerHTML={{__html: item.attributes.description}}></div>
 							<div style={{display: 'flex', justifyContent: 'center'}}>
-								<video width="400" controls>
+								<video width="400" height="240" controls>
 								  <source src={item.attributes.video_sources[0]} type="video/webm" />
 								  <source src={item.attributes.video_sources[1]} type="video/mp4" />
 								  <p>Your browser does not support HTML5 video.</p>
